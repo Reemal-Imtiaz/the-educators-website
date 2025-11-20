@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Admission Procedure - The Educators (Gulzar campus)</title>
+    <meta name="description" content="Detailed admission procedure, test structure, and age limit guidelines for The Educators Gulzar Campus.">
+    <meta name="keywords" content="Admission Procedure, Admission Test, Age Limit, Enrollment">
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        /* Green Banner Look */
+        .page-title {
+            background-color: #198754; /* Bootstrap success green */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .page-title h1 {
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        /* Sub-navigation banner */
+        .sub-nav {
+            background-color: #0d47a1; /* Darker blue for contrast */
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 3px solid #198754; 
+        }
+
+        .sub-nav a {
+            color: #fff;
+            padding: 0 10px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+        }
+
+        .sub-nav a:last-child {
+            border-right: none;
+        }
+
+        .sub-nav a:hover, .sub-nav a.active {
+            color: #ffc107; /* Yellow/Gold hover effect */
+        }
+        
+        /* Main Procedure Section */
+        .procedure-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        /* Step-by-Step Timeline Styling (Blue Background Part) */
+        .timeline-container {
+            background-color: #0b2f5b; /* Deep blue background as per screenshot */
+            color: #fff;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+        
+        /* --- Horizontal Timeline Specifics --- */
+        .timeline-wrapper {
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: space-between; /* Distribute items evenly */
+            align-items: flex-start; /* Align items to the top */
+            position: relative;
+            padding: 20px 0; /* Add padding for the steps */
+        }
+
+        .timeline-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 60px; /* Adjust this to align with the icons */
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: #198754; /* Solid green line */
+            z-index: 1; /* Ensure line is behind numbers/icons */
+        }
+
+        .timeline-step {
+            flex: 1; /* Each step takes equal width */
+            position: relative;
+            text-align: center;
+            padding: 0 10px; /* Padding between steps */
+            z-index: 2; /* Ensure steps are above the line */
+        }
+        
+        .timeline-icon {
+            font-size: 2rem;
+            width: 60px; /* Slightly larger icon */
+            height: 60px;
+            line-height: 60px;
+            background: #198754; /* Green circle */
+            color: #fff;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            border: 3px solid #fff; /* Thicker white border */
+            position: relative;
+            z-index: 3; /* Ensure icon is above line and number */
+        }
+        
+        .timeline-text {
+            font-size: 0.95rem; /* Slightly smaller text for better fit */
+            font-weight: 400;
+            margin-top: 10px;
+            min-height: 60px; /* Ensure consistent text height */
+            display: flex;
+            align-items: flex-start; /* Align text to the top */
+            justify-content: center;
+            text-align: center;
+        }
+
+        .timeline-number {
+            position: absolute;
+            top: 0px; /* Position above the icon */
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            color: #0b2f5b;
+            width: 30px; /* Larger number bubble */
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1rem; /* Larger number font */
+            border: 2px solid #0b2f5b; /* Blue border for number */
+            z-index: 4; /* Ensure number is on top */
+        }
+
+        /* Adjustments for responsiveness for smaller screens */
+        @media (max-width: 768px) {
+            .timeline-wrapper {
+                flex-direction: column; /* Stack vertically on small screens */
+                align-items: center;
+            }
+            .timeline-wrapper::before {
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                height: auto;
+                width: 2px; /* Vertical line */
+                transform: translateX(-50%);
+            }
+            .timeline-step {
+                width: 100%;
+                padding: 30px 0; /* More vertical spacing */
+            }
+            .timeline-step:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                bottom: -15px; /* Adjust for vertical line */
+                left: 50%;
+                height: 30px;
+                border-left: 2px dashed #198754;
+                transform: translateX(-50%);
+            }
+            .timeline-number {
+                top: 0;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* Ensure the final note is styled correctly */
+        .timeline-container .note {
+            font-size: 1.1rem;
+            margin-top: 30px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Admission Test Details Section */
+        .test-details {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .test-box {
+            background-color: #f1f1f1;
+            padding: 25px;
+            border-radius: 8px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .kg-box {
+             background-color: #e73840; /* Red color for KG & I */
+             color: #fff;
+        }
+        .class-box {
+             background-color: #0b63ce; /* Blue color for Class II to VII */
+             color: #fff;
+        }
+
+        .test-box h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .test-box p {
+            font-size: 1rem;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .info-box {
+            background-color: #495057; /* Dark gray background */
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        /* Age Limit Table */
+        .age-limit-table {
+            margin-top: 50px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .age-limit-table table {
+            margin: 0;
+            width: 100%;
+        }
+
+        .age-limit-table thead th {
+            background-color: #0d47a1;
+            color: #fff;
+            font-weight: 700;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .age-limit-table tbody tr td {
+            padding: 10px;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+        
+        .age-limit-table tbody tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+    </style>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <img src="assets/img/logo.png" alt="The Educators Logo" style="height:50px; width:auto; margin-right:10px;">
+                <h1 class="sitename text-white">The Educators</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="vision-mission.html">Mission & Vision</a></li>
+                            <li><a class="dropdown-item" href="news_and_events.html">News & Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><span>Admission</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="apply_online.html">Apply Online</a></li>
+                            <li><a class="dropdown-item active" href="admission-procedure.html">Admission Procedure</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="contact.html">Get Started</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <div class="page-title">
+            <div class="container text-center">
+                
+                <h1>Admission Procedure</h1>
+                <p style="color: rgba(255, 255, 255, 0.8);">HOME / ADMISSION / ADMISSION PROCEDURE</p>
+            </div>
+        </div>
+        
+        
+        
+        <section class="timeline-container">
+            <div class="container">
+                <div class="timeline-wrapper">
+                    
+                    <div class="timeline-step">
+                        <span class="timeline-number">1</span>
+                        <div class="timeline-icon"><i class="bi bi-calendar-event"></i></div>
+                        <div class="timeline-text">
+                            Schedule for date of interview and the admission test is announced.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <span class="timeline-number">2</span>
+                        <div class="timeline-icon"><i class="bi bi-file-earmark-ruled"></i></div>
+                        <div class="timeline-text">
+                            An oral and written test is conducted as per schedule.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <span class="timeline-number">3</span>
+                        <div class="timeline-icon"><i class="bi bi-patch-check"></i></div>
+                        <div class="timeline-text">
+                            A child must first clear the written test before qualifying for interview (written test not applicable for pre-school).
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step">
+                        <span class="timeline-number">4</span>
+                        <div class="timeline-icon"><i class="bi bi-person-lines-fill"></i></div>
+                        <div class="timeline-text">
+                            The child and his/her parents are interviewed by the School Head (and possibly also by attending staff members).
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <span class="timeline-number">5</span>
+                        <div class="timeline-icon"><i class="bi bi-receipt"></i></div>
+                        <div class="timeline-text">
+                            Should the child clear admission test and interview, the admission fee invoice is to be submitted at the school to complete the admission process.
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <p class="note">
+                            Please Note: Deposit fee at the designated bank or school along with the complete registration form.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="test-details container py-5">
+            <h2 class="text-center mb-5" style="color: #0d47a1; font-weight: 700;">Admission Test Details</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <p class="lead text-center mb-4">
+                        There is no written test for pre-school. The admission test for primary and secondary school is based on the following subjects and classes:
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center g-4">
+                
+                <div class="col-md-5">
+                    <div class="test-box kg-box">
+                        <h3>KG & I</h3>
+                        <p>English, Urdu, Mathematics and General Knowledge (oral)</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-5">
+                    <div class="test-box class-box">
+                        <h3>Class II to VII</h3>
+                        <p>English, Urdu, Mathematics and Science</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="info-box">
+                        <p>
+                            The admission test is structured to fit onto one page with questions from all subjects and each paper is for **100 marks**, which are spread evenly across all subjects.
+                        </p>
+                        <p class="mb-0">
+                            No other personnel other than the designated Invigilators are allowed at the time of the test. The Invigilators provide guidance and support to the children during the test if required.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="container pb-5">
+            <h2 class="text-center mb-4" style="color: #0d47a1; font-weight: 700;">Age Limit</h2>
+            <p class="text-center mb-4">Please see details of the minimum and maximum age standards defined for each class level.</p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="age-limit-table">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Class Level</th>
+                                    <th>Minimum</th>
+                                    <th>Maximum</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Playgroup (PG)</td><td>2 Years 5 Months</td><td>3 Years 5 Months</td></tr>
+                                <tr><td>Nursery</td><td>3 Years 6 Months</td><td>4 Years 5 Months</td></tr>
+                                <tr><td>KG</td><td>4 Years 6 Months</td><td>5 Years 5 Months</td></tr>
+                                <tr><td>I</td><td>5 Years</td><td>6 Years</td></tr>
+                                <tr><td>II</td><td>6 Years</td><td>7 Years</td></tr>
+                                <tr><td>III</td><td>7 Years</td><td>8 Years</td></tr>
+                                <tr><td>IV</td><td>8 Years</td><td>9 Years</td></tr>
+                                <tr><td>V</td><td>9 Years</td><td>10 Years</td></tr>
+                                <tr><td>VI</td><td>10 Years</td><td>11 Years</td></tr>
+                                <tr><td>VII</td><td>11 Years</td><td>12 Years</td></tr>
+                                <tr><td>VIII</td><td>12 Years</td><td>13 Years</td></tr>
+                                <tr><td>IX</td><td>13 Years</td><td>14 Years</td></tr>
+                                <tr><td>X</td><td>14 Years</td><td>15 Years</td></tr>
+                                <tr><td>XI</td><td>15 Years</td><td>16 Years</td></tr>
+                                <tr><td>XII</td><td>16 Years</td><td>17 Years</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-muted small text-center mt-3">
+                        Note: Children who have crossed the defined age limitations considered for the respective class/course are not applicable.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">The Educators</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Gulzar Campus Phool Nagar</p>
+            <p>Lahore</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>educators@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="vision-mission.html">Mission & Vision</a></li>
+            <li><a href="news_and_events.html">News and Events</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Admission</h4>
+          <ul>
+            <li><a href="apply-online.html">Apply Online</a></li>
+            <li><a href="admission-procedure.html">Admission procedure</a></li>
+          </ul>
+        </div>
+         <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Service Desk</a></li>
+            
+          </ul>
+        </div>
+        
+
+        
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">The Educators( Gulzar Campus)</strong> <span>All Rights Reserved</span></p>
+      
+
+  </footer>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
